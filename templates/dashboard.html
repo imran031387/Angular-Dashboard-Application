@@ -1,0 +1,70 @@
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="row" id="process-overview-dashboard">
+            <!-- Display process from the json file. -->
+            <div class="col-md-4" ng-repeat="data in Processes">
+                <div class="box box-success box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title"><span class="process-header-title">{{data.process_name}} </span>{{data.process_id}}</h3>
+                        <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div><!-- /.box-tools -->
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="process-info-box">
+                            <div class="process-meter">
+                                <div class="process-widget-title">CPU %</div>
+                                <div class="process-widget-body">{{data.process_cpu}}</div>
+                            </div>
+                            <div class="process-graph"></div>
+                        </div>
+                        <div class="process-info-widget-box">
+                            <div class="process-status border-right">
+                                <div class="process-widget-title">Status</div>
+                                <div class="process-widget-body green">{{data.process_status}}</div>
+                            </div>
+                            <div class="process-instance border-right">
+                                <div class="process-widget-title">Instances</div>
+                                <div class="process-widget-body">{{data.process_instance}}</div>
+                            </div>
+                            <div class="process-memory border-right">
+                                <div class="process-widget-title">Memory MB</div>
+                                <div class="process-widget-body">
+                                    <div class="c100 p25 small">
+                                        <span>{{data.process_memory}}</span>
+                                        <div class="slice">
+                                            <div class="bar"></div>
+                                            <div class="fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="process-uptime border-right">
+                                <div class="process-widget-title">Up Time</div>
+                                <div class="process-widget-body digital-fire">{{data.process_uptime}}</div>
+                            </div>
+                            <div class="process-restart">
+                                <div class="process-widget-title">Restarts</div>
+                                <div class="process-widget-body">
+                                    <span>{{data.process_restarts}}</span>
+                                    <div class="dropdown restart-time-dropdown" ng-if="data.process_restarts === '3'">
+                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                            <span class="caret"></span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">22 jan 2016 12:34:23</a></li>
+                                            <li><a href="#">22 jan 2016 12:34:23</a></li>
+                                            <li><a href="#">22 jan 2016 12:34:23</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.box-body -->
+                </div><!-- /.box -->
+
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        <!-- =========================================================== -->
+    </section><!-- /.content -->
+</div><!-- /.content-wrapper -->

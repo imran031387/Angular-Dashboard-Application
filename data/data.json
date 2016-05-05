@@ -1,0 +1,32 @@
+[
+  {
+    "process_name": "Process",
+    "process_id": "1",
+    "process_cpu": "75",
+    "process_status": "On",
+    "process_instance": "3",
+    "process_memory": "14",
+    "process_uptime": "5:24:51",
+    "process_restarts": "0"
+  },
+  {
+    "process_name": "Process",
+    "process_id": "2",
+    "process_cpu": "85",
+    "process_status": "On",
+    "process_instance": "4",
+    "process_memory": "13",
+    "process_uptime": "4:24:51",
+    "process_restarts": "3"
+  },
+  {
+    "process_name": "Process",
+    "process_id": "3",
+    "process_cpu": "45",
+    "process_status": "On",
+    "process_instance": "5",
+    "process_memory": "12",
+    "process_uptime": "3:24:51",
+    "process_restarts": "0"
+  }
+]
